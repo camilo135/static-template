@@ -1,0 +1,57 @@
+:root {
+  --space-medium: 12px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100dvh;
+}
+
+.app {
+  height: 100%;
+}
+
+.menu {
+  height: 64px;
+  background-color: orange;
+  margin: 0;
+  text-align: center;
+}
+
+.search-input-title {
+  text-align: center;
+  padding-top: var(--space-medium);
+  padding-bottom: var(--space-medium);
+}
+
+.search-input {
+  height: 32px;
+  padding-top: var(--space-medium);
+  padding-bottom: var(--space-medium);
+  background-color: lightgray;
+  text-align: center;
+}
+
+.search-results {
+  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: var(--space-medium);
+  padding-left: var(--space-medium);
+  padding-right: var(--space-medium);
+}
+
+.catalog-item {
+  width: 320px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.catalog-item-block {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 320px;
+  height: 360px;
+  background-color: lightgray;
+}
