@@ -1,5 +1,11 @@
 :root {
   --space-medium: 12px;
+  --space-menu-item: 2em;
+  --ut-orange: #ff8811ff;
+  --jasmine: #f4d06fff;
+  --floral-white: #fff8f0ff;
+  --tiffany-blue: #9dd9d2ff;
+  --space-cadet: #392f5aff;
 }
 
 html,
@@ -13,11 +19,58 @@ body {
   height: 100%;
 }
 
+.main {
+  padding-top: 64px;
+}
+
 .menu {
   height: 64px;
-  background-color: orange;
+  background-color: var(--ut-orange);
   margin: 0;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.menu-item a {
+  color: white;
+  text-decoration: none;
+  /* add underline on hover */
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+
+.menu-item a:hover {
+  border-bottom: 2px solid white;
+}
+
+
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.menu-item {
+  /* add more space between menu items */
+  margin-right: var(--space-menu-item);
+  /* remove underline from links */
+  text-decoration: none;
+  
+  /* bold text */
+  font-weight: bold;
 }
 
 .search-input-title {
@@ -30,8 +83,75 @@ body {
   height: 32px;
   padding-top: var(--space-medium);
   padding-bottom: var(--space-medium);
-  background-color: lightgray;
+  background-color: var(--jasmine);
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-input span {
+  color: var(--space-cadet);
+}
+
+.search-item {
+  margin-right: var(--space-medium);
+}
+
+.search-input input {
+  width: 30%;
+  height: 100%;
+  border: none;
+  background-color: var(--floral-white);
+  padding: 0 10px;
+  font-size: 16px;
+  color: var(--space-cadet);
+  outline: none;
+  /* add border radius */
+  border-radius: 5px;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' ,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+#search-icon {
+  font-size: 35px;
+  color: var(--space-cadet);
+}
+
+.search-input button {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  border: none;
+  background-color: var(--ut-orange);
+  color: white;
+  cursor: pointer;
+  outline: none;
+  /* add border radius */
+  border-radius: 5px;
+  /* add animation on click */
+  transition: background-color 0.3s ease;
+}
+
+.search-input button:hover {
+  background-color: var(--tiffany-blue);
+}
+
+.search-input input::placeholder {
+  color: var(--tiffany-space-cadet);
 }
 
 .search-results {
